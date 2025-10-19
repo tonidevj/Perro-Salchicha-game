@@ -91,6 +91,7 @@ canvas {
 }
 
 button {
+  -webkit-appearance: none;
   background-color: #f4c97c;
   border: none;
   border-radius: 50%;
@@ -103,7 +104,6 @@ button {
   align-items: center;
   justify-content: center;  
   line-height: 0;
-  -webkit-appearance: none;
 }
 
  
@@ -118,18 +118,17 @@ button:active {
     height: 90vw;
   }
 
-  button { 
+  button {
+    width: 50px;
+    height: 50px;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    vertical-align: middle;
-    -webkit-appearance: none;
   }
   svg {
     width: 100%;
     height: 100%;  
-    vertical-align: middle;
   }
 }
 
