@@ -99,32 +99,9 @@ button {
   font-size: 1.5rem;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.1s ease;
-}
-
-button:active {
-  transform: scale(0.9);
-}
-
-@media (max-width: 400px) {
-  canvas {
-    width: 90vw;
-    height: 90vw;
-  }
-
-button {
-  background-color: #f4c97c;
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 1.5rem;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.1s ease;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  /* 👇 Estos 2 eliminan el padding visual de Safari */
+  justify-content: center; 
   -webkit-appearance: none;
   line-height: 0;
 }
@@ -138,6 +115,25 @@ button svg {
   /* 👇 Asegura que no haya “espacio fantasma” */
   vertical-align: middle;
 }
+
+button:active {
+  transform: scale(0.9);
+}
+
+@media (max-width: 400px) {
+  canvas {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .display-none {
