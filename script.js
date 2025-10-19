@@ -3,6 +3,8 @@ const startBtn = document.getElementById('start-btn');
 const gameContainer = document.getElementById('game-container');
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d'); 
+const bgMusic = document.getElementById('bg-music');
+bgMusic.volume = 0.5;
 
 const box = 15;
 let dog, direction, score, bread, gameInterval;
@@ -23,6 +25,10 @@ function startGame() {
   // Inicia el bucle
   clearInterval(gameInterval);
   gameInterval = setInterval(drawGame, 100);
+
+   bgMusic.play().catch(err => {
+    console.log('El navegador bloqueó la reproducción automática:', err);
+  });
 }
 
 // 🥖 Pan aleatorio
