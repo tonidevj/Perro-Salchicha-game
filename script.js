@@ -25,10 +25,17 @@ function startGame() {
   clearInterval(gameInterval);
   gameInterval = setInterval(drawGame, 100);
 
-   bgMusic.play().catch(err => {
-    console.log('El navegador bloqueó la reproducción automática:', err);
-  });
-}
+if (bgMusic) {
+    bgMusic.volume = 0.5;
+    const playPromise = bgMusic.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => console.log('🎵 Música reproduciéndose'))
+        .catch(err => {
+          console.log('🔇 Safari bloqueó el audio, esperando toque:', err);
+        });
+}}}
 
 // 🥖 Pan aleatorio
 function randomBreadPosition() {
