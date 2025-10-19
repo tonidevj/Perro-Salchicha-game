@@ -91,7 +91,8 @@ canvas {
 }
 
 button {
-  -webkit-appearance: none; /* necesario para que se vean centrados */
+  -webkit-appearance: none;
+  appearance: none;
   background-color: #f4c97c;
   border: none;
   border-radius: 50%;
@@ -104,16 +105,18 @@ button {
   align-items: center;
   justify-content: center;
   line-height: 0;
+  padding: 0;
 }
 
 button svg {
-  width: 2rem;   /* usa valores fijos, no % */
-  height: 2rem;
+  width: 60%; /* en lugar de rem, usa % relativo dentro del botón */
+  height: 60%;
   display: block;
   margin: auto;
-  vertical-align: middle;
   flex-shrink: 0;
-  transform: scale(1.2);         /* 👈 corrige el tamaño en Safari */
+  pointer-events: none;
+  -webkit-transform: scale(1.8); /* 👈 Safari necesita esto */
+  transform: scale(1.8);
   transform-origin: center;
 }
 
@@ -130,13 +133,13 @@ button:active {
   button {
     width: 50px;
     height: 50px;
-    font-size: 1.2rem;
   }
 
   button svg {
-    width: 1.6rem;   /* íconos más pequeños para móviles */
-    height: 1.6rem;
-    transform: scale(1.3);  /* se amplía un poco más en iPhone */
+    width: 70%;
+    height: 70%;
+    -webkit-transform: scale(1.7);
+    transform: scale(1.7);
   }
 }
 
