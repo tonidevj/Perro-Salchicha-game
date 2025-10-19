@@ -106,7 +106,7 @@ button {
   line-height: 0;
 }
 
-button svg {
+button {
   display: block;
   margin: auto;
   width: 60%;
