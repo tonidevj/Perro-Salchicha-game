@@ -107,9 +107,6 @@ button {
 }
 
 button svg {
-  display: block;
-  margin: auto; 
-
   /* 👇 Asegura que no haya “espacio fantasma” */
   vertical-align: middle;
 }
