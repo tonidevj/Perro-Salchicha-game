@@ -11,7 +11,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  -webkit-appearance: none;
 }
 
 /* Ocultar elementos dinámicamente */
@@ -100,13 +99,7 @@ button {
   font-size: 1.5rem;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.1s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-  line-height: 0;
 }
-
- 
 
 button:active {
   transform: scale(0.9);
@@ -118,16 +111,13 @@ button:active {
     height: 90vw;
   }
 
-  button { 
+  button {
+    width: 50px;
+    height: 50px;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  svg {
-    width: 100%;
-    height: 100%; 
-    background-color: green;
   }
 }
 
