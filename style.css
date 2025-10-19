@@ -99,6 +99,23 @@ button {
   font-size: 1.5rem;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 👇 Estos 2 eliminan el padding visual de Safari */
+  -webkit-appearance: none;
+  line-height: 0;
+}
+
+button svg {
+  display: block;
+  margin: auto;
+  width: 60%;
+  height: 60%;
+
+  /* 👇 Asegura que no haya “espacio fantasma” */
+  vertical-align: middle;
 }
 
 button:active {
