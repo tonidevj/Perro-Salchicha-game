@@ -106,10 +106,7 @@ button {
   line-height: 0;
 }
 
-button svg {
-  /* 👇 Asegura que no haya “espacio fantasma” */
-  vertical-align: middle;
-}
+ 
 
 button:active {
   transform: scale(0.9);
