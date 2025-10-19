@@ -106,11 +106,9 @@ button {
   line-height: 0;
 }
 
-button {
+button svg {
   display: block;
-  margin: auto;
-  width: 60%;
-  height: 60%;
+  margin: auto; 
 
   /* 👇 Asegura que no haya “espacio fantasma” */
   vertical-align: middle;
